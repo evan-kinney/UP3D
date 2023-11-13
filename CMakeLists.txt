@@ -6,7 +6,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Windows")
     if (NOT MSYS)
         message(FATAL_ERROR "MSYS2 is required on Windows for this project.")
     endIF()
-elseif(NOT CMAKE_SYSTEM_NAME MATCHES "Linux" AND NOT CMAKE_SYSTEM_NAME MATCHES "Darwin")
+elseif(NOT CMAKE_SYSTEM_NAME MATCHES "Linux" AND NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" AND NOT CMAKE_SYSTEM_NAME MATCHES "MSYS")
     message(FATAL_ERROR "Unsupported operating system: ${CMAKE_SYSTEM_NAME}")
 endif()
 
